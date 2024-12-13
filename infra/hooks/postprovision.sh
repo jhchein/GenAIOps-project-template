@@ -81,6 +81,9 @@ else
     echo "📄 | Environment values saved to .env."
 fi
 
+# Add the src directory to PYTHONPATH
+export PYTHONPATH="$(pwd)/src:$PYTHONPATH"
+
 # Install dependencies
 echo '📦 | Installing dependencies from "requirements.txt"...'
 if ! pip install --upgrade pip setuptools; then
